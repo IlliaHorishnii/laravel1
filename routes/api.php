@@ -27,11 +27,11 @@ Route::prefix('paid')->group(function () {
     Route::get('/paid', [PaymentsController::class, 'payments']);
 });
 
-Route::prefix('partners')->group(function () {
-    Route::get('/partners', [PartnersController::class, 'partners']);
-});
 Route::prefix('sum')->group(function () {
     Route::get('/sum', [SumController::class, 'sum']);
+});
+Route::prefix('partners')->group(function () {
+    Route::get('/partners', [PartnersController::class, 'partners']);
 });
 
 
