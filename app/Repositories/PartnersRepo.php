@@ -8,14 +8,6 @@ class PartnersRepo
 {
     public static function request()
     {
-        $sql = " SELECT *
-    FROM partners_list
-    WHERE `name` IN (
-        SELECT `name`
-        FROM partners_list
-         GROUP BY `name`
-        HAVING count(`name`) > 1)
-        ORDER BY `name`";
 
         $request = Partners::wherein('name',
             partners::select('name')->groupby('name')->having(Partners::raw('count(name)'), '>', '1'))
