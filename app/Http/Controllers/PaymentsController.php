@@ -10,8 +10,9 @@ class PaymentsController extends Controller
 {
 
     public function payments() {
-        PaymentsRepo::request();
+       $payments = PaymentsRepo::request();
 
+        return json_encode($payments, JSON_UNESCAPED_UNICODE);
 
     }
 }

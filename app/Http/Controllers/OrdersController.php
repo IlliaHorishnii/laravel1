@@ -10,8 +10,9 @@ class OrdersController extends Controller
 {
 
     public function orders() {
-       OrdersRepo::request();
+      $orders = OrdersRepo::request();
 
+        return json_encode($orders, JSON_UNESCAPED_UNICODE);
 
     }
 }

@@ -14,15 +14,7 @@ class SumRepo
            ->groupby('partners.name')
             ->get();
 
-        foreach($request as $req) {
-            echo 'ID: '.$req['id'];
-            echo "<br>";
-            echo 'Name: '.$req['Name'];
-            echo "<br>";
-            echo 'Total: '.$req['total'];
-            echo "<br>";
-            echo "<br>";
-        }
+        return $request;
 
     }
 

@@ -10,8 +10,9 @@ class SumController extends Controller
 {
 
     public function sum() {
-    SumRepo::request();
+    $sum = SumRepo::request();
 
+    return json_encode($sum, JSON_UNESCAPED_UNICODE);
 
 }
 }

@@ -10,8 +10,7 @@ class PartnersController extends Controller
 {
 
     public function partners() {
-        PartnersRepo::request();
-
-
+      $partners =  PartnersRepo::request();
+      return json_encode($partners, JSON_UNESCAPED_UNICODE);
     }
 }
