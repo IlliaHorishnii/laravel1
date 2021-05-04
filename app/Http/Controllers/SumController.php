@@ -17,7 +17,7 @@ use App\Repositories\SumRepo;
  *          example={
  *             "data": {
  *                      "id": 1,
- *                      "name": "Hayley Reilly",
+ *                      "name": "Alex",
  *                      "sum": "13880",
  *              }
  *          },
