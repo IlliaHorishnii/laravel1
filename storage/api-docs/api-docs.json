@@ -1,0 +1,51 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "TEST API",
+        "description": "Description of API",
+        "contact": {
+            "email": "test@gmail.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "htttp://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/getSum": {
+            "get": {
+                "tags": [
+                    "Sum"
+                ],
+                "summary": "Get sum of orders by one contragent",
+                "description": "List of notes",
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                },
+                                "example": {
+                                    "data": {
+                                        "id": 1,
+                                        "name": "Hayley Reilly",
+                                        "sum": "13880"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Response error"
+                    }
+                }
+            }
+        }
+    },
+    "security": [
+        []
+    ]
+}
