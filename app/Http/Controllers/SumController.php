@@ -13,14 +13,17 @@ use App\Repositories\SumRepo;
  *        response="200",
  *        description="Successful response",
  *        @OA\JsonContent(
- *          type="object",
- *          example={
- *             "data": {
- *                      "id": 1,
- *                      "name": "Alex",
- *                      "sum": "13880",
- *              }
- *          },
+ *          @OA\Property(
+ *           property="data",
+ *           type="array",
+ *           @OA\Items(
+ *               type="object",
+ *               format="query",
+ *               @OA\Property(property="id", type="integer", example=1),
+ *               @OA\Property(property="name", type="string", example="Alex"),
+ *               @OA\Property(property="sum", type="integer", example=13100)
+ *              ),
+ *          ),
  *      )
  *   ),
  *     @OA\Response(

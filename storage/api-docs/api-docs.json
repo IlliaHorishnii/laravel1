@@ -26,14 +26,30 @@
                         "content": {
                             "application/json": {
                                 "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer",
+                                                        "example": 1
+                                                    },
+                                                    "name": {
+                                                        "type": "string",
+                                                        "example": "Alex"
+                                                    },
+                                                    "sum": {
+                                                        "type": "integer",
+                                                        "example": 13100
+                                                    }
+                                                },
+                                                "type": "object",
+                                                "format": "query"
+                                            }
+                                        }
+                                    },
                                     "type": "object"
-                                },
-                                "example": {
-                                    "data": {
-                                        "id": 1,
-                                        "name": "Alex",
-                                        "sum": "13880"
-                                    }
                                 }
                             }
                         }
