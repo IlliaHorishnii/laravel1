@@ -22,6 +22,5 @@ class RequestsControllerTest extends TestCase
 
         $this->assertEquals($keys, ['id', 'productName', 'paymentMethod', 'status', 'orderTime']);
 
-        var_dump($response);
     }
 }

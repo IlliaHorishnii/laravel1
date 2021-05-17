@@ -11,7 +11,10 @@ class RequestsController extends Controller
 
     public function payments()
     {
-        $payments = PaymentsRepo::request();
+        $test = ['id' => '1', 'name' => 'name', 'method' => 'cash', 'status' => 'paid', 'time' => '2021-05-13 17:34:21'];
+
+        $payments = PaymentsRepo::request($test);
+
         $data = [
             'id' => $payments->id,
             'productName'=> $payments->productName,
